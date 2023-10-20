@@ -12,7 +12,8 @@ body{
     height: 100vh;
 }
 main{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     color: hsl(0, 0%, 100%);
     font-family: 'Inter';
     background-color: hsl(244, 38%, 16%);
@@ -31,7 +32,6 @@ footer{
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-
 }
 
 .cover, img{
@@ -97,6 +97,7 @@ footer p {
 /* resphonsive */
 @media (max-width:800px) {
     main{
+        grid-template-columns: 1fr;
         flex-direction: column-reverse;
         max-width: 20rem;
         font-size: 10px;
@@ -114,10 +115,12 @@ footer p {
     .col{
         margin-top: 2rem;
     }
+    aside{
+        order: -1;
+    }
     .cover::after{
         height: 100%;
         border-radius: .625rem .625rem 0 0;
-        top: -2px;
     }
     img{
         border-radius: .625rem .625rem 0 0 ;
