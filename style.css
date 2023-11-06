@@ -96,6 +96,9 @@ footer p {
 
 /* resphonsive */
 @media (max-width:800px) {
+    body{
+        height:120vh;
+    }
     main{
         grid-template-columns: 1fr;
         flex-direction: column-reverse;
